@@ -1,0 +1,48 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --main-color: #fff;
+  --accent-color: #ff364a;
+  --main-color-negative: #141414;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --main-color: #141414;
+    --accent-color: #ff364a;
+    --main-color-negative: #fff;
+  }
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background-color: var(--main-color, black);
+  display: grid;
+  place-items: center;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.logo {
+  max-width: 400px;
+}
+
+.main-logo-color {
+  fill: var(--main-color-negative);
+}
+.accent-logo-color {
+  fill: var(--accent-color);
+}
